@@ -22,8 +22,10 @@ function App() {
         <Header />
         <ToDoForm addTask={addTask} />
       </div>
-      <ToDoList toDoList={toDoList} />
-      <Timer />
+      <div id="bodyContainer">
+        <Timer />
+        <ToDoList toDoList={toDoList} />
+      </div>
     </div>
   );
 }
