@@ -1,0 +1,17 @@
+#timerHolder {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200%;
+  background: rgb(96, 96, 255);
+  color: white;
+}
+#startButton {
+  width: 75px;
+  background: white;
+  font-size: 28px;
+  border: transparent;
+  color: rgb(96, 96, 255);
+}

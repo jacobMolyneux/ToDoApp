@@ -1,6 +1,5 @@
 import React from "react";
-import { CardDeck, CardGroup } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
+
 import ToDo from "./ToDo";
 const ToDoList = ({ toDoList }) => {
   return (

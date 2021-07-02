@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+import "./ToDoForm.css";
 
 const ToDoForm = ({ addTask }) => {
   const [userInput, setUserInput] = useState("");
@@ -16,14 +16,13 @@ const ToDoForm = ({ addTask }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          id="taskInputForm"
           value={userInput}
           type="text"
           onChange={handleChange}
           placeholder="Enter Task"
         ></input>
-        <Button variant="primary" size="lg">
-          Submit
-        </Button>
+        <button id="submitForm">Submit</button>
       </form>
     </div>
   );

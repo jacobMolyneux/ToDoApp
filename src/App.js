@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Header from "./Header.js";
+import Header from "./Components/Header.js";
 import data from "./data.json";
-import ToDoList from "./ToDoList";
-import ToDoForm from "./ToDoForm";
-import "bootstrap/dist/css/bootstrap.min.css";
+import ToDoList from "./Components/ToDoList";
+import ToDoForm from "./Components/ToDoForm";
+import Timer from "./Components/timer";
+import "./App.css";
 
 function App() {
   const [toDoList, setToDoList] = useState(data);
@@ -16,12 +17,13 @@ function App() {
     setToDoList(copy);
   };
   return (
-    <div className="App" className="d-flex">
-      <div className="d-flex-column margin-10rem">
+    <div className="App">
+      <div id="headerContainer">
         <Header />
         <ToDoForm addTask={addTask} />
       </div>
       <ToDoList toDoList={toDoList} />
+      <Timer />
     </div>
   );
 }
