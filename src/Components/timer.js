@@ -9,25 +9,24 @@ export default class Timer extends React.Component {
       seconds: 0,
     };
     this.countDownSeconds = this.countDownSeconds.bind(this);
-    this.countDownMinutes = this.countDownMinutes.bind(this);
+
     this.startTimer = this.startTimer.bind(this);
   }
   countDownSeconds(e) {
     if (this.state.seconds !== 0) {
       this.setState({ seconds: this.state.seconds - 1 });
     } else if (this.state.seconds === 0) {
-      this.setState({ seconds: (this.state.seconds = 59) });
-    }
-  }
-  countDownMinutes() {
-    while (this.state.minutes !== 0 && this.state.seconds !== 0) {
+      this.setState({ seconds: 59 });
       this.setState({ minutes: this.state.minutes - 1 });
     }
+  }
+  stopTimer() {
+    clearInterval();
   }
 
   startTimer() {
     setInterval(this.countDownSeconds, 1000);
-    setInterval(this.countDownMinutes, 60000);
+
     console.log("timer Started");
   }
   render() {
@@ -39,6 +38,9 @@ export default class Timer extends React.Component {
           </h1>
           <button id="startButton" onClick={this.startTimer}>
             Start
+          </button>
+          <button id="stopButton" onClick={this.stopTimer}>
+            Stop
           </button>
         </div>
         <div id="timeChanger"></div>
