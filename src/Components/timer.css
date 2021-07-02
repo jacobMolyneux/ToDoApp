@@ -15,3 +15,10 @@
   border: transparent;
   color: rgb(96, 96, 255);
 }
+#stopButton {
+  width: 75px;
+  background: white;
+  font-size: 28px;
+  border: transparent;
+  color: rgb(96, 96, 255);
+}
